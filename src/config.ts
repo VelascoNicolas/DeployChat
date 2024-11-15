@@ -20,7 +20,7 @@ export const dbConfig: TypeOrmModuleOptions = {
   database: 'verceldb',
   ssl: true,
   //entities: Object.values(Entities),
-  entities: [Profile, Client, Enterprise, Message, Flow, PricingPlan, Example],
+  entities: [Profile, Base, Client, Enterprise, Message, Flow, PricingPlan, Example, Profile],
   autoLoadEntities: true,
   synchronize: true,
   logging: true,
