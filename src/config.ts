@@ -7,6 +7,7 @@ import {Flow} from "./entities/flow/flow.model";
 import {PricingPlan} from "./entities/pricingPlan/pricingPlan.model";
 import {Example} from "./entities/example/example.model";
 import { Profile } from "./entities/profile/profile.model";
+import { Base } from "./entities/base/base.model";
 
 
 dotenv.config();
