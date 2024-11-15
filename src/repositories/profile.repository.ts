@@ -181,7 +181,6 @@ export class ProfileRepository extends GenericRepository<Profile> {
     try {
       const profiles = await prisma.profile.findMany({
         where: { enterprise: { id: idEnterprise } },
-        include: { enterprise: true },
       });
       const profileData = await Promise.all(
         
@@ -204,7 +203,7 @@ export class ProfileRepository extends GenericRepository<Profile> {
             email: data.user?.email,
             role: data.user?.role,
             createdAt: data.user?.created_at,
-            enterpriseId: profile.enterprise.id,
+            enterpriseId: profile.enterpriseId,
           };
         })
       );
